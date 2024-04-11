@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "49e6b452-db98-4ea5-90e1-c7d0d9b7373d",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "34171359-49e6b452-db98-4ea5-90e1-c7d0d9b7373d"
+	},
+	"item": [
+		{
+			"name": "Create a product",
+			"id": "0e5693ed-cb03-4156-b86e-215acee55e5f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Apple\",\r\n    \"price\" : 30,\r\n    \"stock\" : 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createProduct"
+					]
+				},
+				"description": "## Create Product\n\nThis endpoint allows you to create a new product.\n\n### Request Body\n\n- `name` (string, required): The name of the product.\n- `price` (number, required): The price of the product.\n- `stock` (number, required): The available stock of the product.\n    \n\n### Response\n\n- Status: 200 OK\n- Content-Type: application/json\n    \n\nExample response:\n\n``` json\n{\n    \"name\": \"\",\n    \"price\": 0,\n    \"description\": null,\n    \"stock\": 0,\n    \"createdAt\": \"\",\n    \"_id\": \"\",\n    \"__v\": 0\n}\n\n ```"
+			},
+			"response": [
+				{
+					"id": "ae09abab-f145-450d-adb6-89b59de69326",
+					"name": "Create a product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Apple\",\r\n    \"price\" : 30,\r\n    \"stock\" : 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/createProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"createProduct"
+							]
+						},
+						"description": "## Create Product\n\nThis endpoint allows you to create a new product.\n\n### Request Body\n\n- `name` (string, required): The name of the product.\n- `price` (number, required): The price of the product.\n- `stock` (number, required): The available stock of the product.\n    \n\n### Response\n\n- Status: 200 OK\n- Content-Type: application/json\n    \n\nExample response:\n\n``` json\n{\n    \"name\": \"\",\n    \"price\": 0,\n    \"description\": null,\n    \"stock\": 0,\n    \"createdAt\": \"\",\n    \"_id\": \"\",\n    \"__v\": 0\n}\n\n ```"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE1Nzg1NDJmZGQwZWM0NTBiMzI3ZGIiLCJ1c2VybmFtZSI6Ik1haGlsODQ0OCIsImVtYWlsIjoia3V2YWRpeWFtYWhpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTI4NTk3NjIsImV4cCI6MTcxMjg1OTc3N30.t0zB768tmuqtpwR_pCSnmjR83G6aoLkL2VPeQiQvXXI; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89-RfI4HCVhWsmJ28iLqyKJNILImUc\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Apr 2024 18:22:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Apple\",\n    \"price\": 30,\n    \"description\": null,\n    \"stock\": 20,\n    \"createdAt\": \"2024-04-11T18:21:47.713Z\",\n    \"_id\": \"66182a721bc23d0c693e7660\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all products",
+			"id": "5948d275-abf3-4016-94fc-a5d8590f10a2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"apple1\",\r\n    \"price\" : 30.123,\r\n    \"stock\" : 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve product information from the server. The request does not require any parameters or request body.\n\nThe response will include an array of objects, where each object represents a product. Each product object contains the following properties:\n\n- \"_id\": The unique identifier for the product.\n- \"name\": The name of the product.\n- \"price\": The price of the product.\n- \"description\": A description of the product, which may be null.\n- \"stock\": The available stock quantity of the product.\n- \"createdAt\": The timestamp of when the product was created.\n- \"__v\": Version control field.\n    \n\nExample response:\n\n``` json\n[\n    {\n        \"_id\": \"\",\n        \"name\": \"\",\n        \"price\": 0,\n        \"description\": null,\n        \"stock\": 0,\n        \"createdAt\": \"\",\n        \"__v\": 0\n    }\n]\n\n ```"
+			},
+			"response": [
+				{
+					"id": "955db424-34d0-497d-b19b-ae54988ae3f5",
+					"name": "Get all products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"apple1\",\r\n    \"price\" : 30.123,\r\n    \"stock\" : 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						},
+						"description": "This endpoint makes an HTTP GET request to retrieve product information from the server. The request does not require any parameters or request body.\n\nThe response will include an array of objects, where each object represents a product. Each product object contains the following properties:\n\n- \"_id\": The unique identifier for the product.\n- \"name\": The name of the product.\n- \"price\": The price of the product.\n- \"description\": A description of the product, which may be null.\n- \"stock\": The available stock quantity of the product.\n- \"createdAt\": The timestamp of when the product was created.\n- \"__v\": Version control field.\n    \n\nExample response:\n\n``` json\n[\n    {\n        \"_id\": \"\",\n        \"name\": \"\",\n        \"price\": 0,\n        \"description\": null,\n        \"stock\": 0,\n        \"createdAt\": \"\",\n        \"__v\": 0\n    }\n]\n\n ```"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE1Nzg1NDJmZGQwZWM0NTBiMzI3ZGIiLCJ1c2VybmFtZSI6Ik1haGlsODQ0OCIsImVtYWlsIjoia3V2YWRpeWFtYWhpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTI4NTk4NjYsImV4cCI6MTcxMjg1OTg4MX0.eGkIzkvyIxkB1xY2AWIkT420zMK8nrYIkJdEsTsMe-I; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "282"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11a-rH519zTNxhK4W1D0txT73NcnrKM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Apr 2024 18:24:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6617f012c0e752a773f55114\",\n        \"name\": \"apple1\",\n        \"price\": 30.123,\n        \"description\": null,\n        \"stock\": 20,\n        \"createdAt\": \"2024-04-11T14:13:17.586Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"661828631d17717aceb7ea60\",\n        \"name\": \"Apple\",\n        \"price\": 30,\n        \"description\": null,\n        \"stock\": 20,\n        \"createdAt\": \"2024-04-11T18:13:41.411Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get a single product",
+			"id": "0fe47776-2e1a-46b0-8eff-49f1034c1684",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/6617ee2d50920d65ab47ab88",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"6617ee2d50920d65ab47ab88"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve product details based on the provided product ID. The response will be in JSON format and will include the product's ID, name, price, description, stock, creation date, and version information.\n\nExample Response:\n\n``` json\n{\n    \"_id\":\"\",\n    \"name\":\"\",\n    \"price\":0,\n    \"description\":null,\n    \"stock\":0,\n    \"createdAt\":\"\",\n    \"__v\":0\n}\n\n ```"
+			},
+			"response": [
+				{
+					"id": "61292b6d-fcf1-44a5-8b9c-ff28042aa09a",
+					"name": "Get a single product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/6617ee2d50920d65ab47ab88",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6617ee2d50920d65ab47ab88"
+							]
+						},
+						"description": "This endpoint makes an HTTP GET request to retrieve product details based on the provided product ID. The response will be in JSON format and will include the product's ID, name, price, description, stock, creation date, and version information.\n\nExample Response:\n\n``` json\n{\n    \"_id\":\"\",\n    \"name\":\"\",\n    \"price\":0,\n    \"description\":null,\n    \"stock\":0,\n    \"createdAt\":\"\",\n    \"__v\":0\n}\n\n ```"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE1Nzg1NDJmZGQwZWM0NTBiMzI3ZGIiLCJ1c2VybmFtZSI6Ik1haGlsODQ0OCIsImVtYWlsIjoia3V2YWRpeWFtYWhpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTI4NTk5ODMsImV4cCI6MTcxMjg1OTk5OH0.BONqRd7J53MeGdO7De8w-9tSl90pS-6n3CJ8gT0KfTk; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89-pbV85+MF700Rjwjolik6fW9V7Rk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Apr 2024 18:26:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"661828631d17717aceb7ea60\",\n    \"name\": \"Apple\",\n    \"price\": 30,\n    \"description\": null,\n    \"stock\": 20,\n    \"createdAt\": \"2024-04-11T18:13:41.411Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}

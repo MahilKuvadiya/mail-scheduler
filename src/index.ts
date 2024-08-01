@@ -29,7 +29,7 @@ app.get('/',(req : express.Request, res : express.Response) => {
 
 server.listen(process.env.PORT,()=>{
     console.log('server listning... on ' + process.env.PORT)
-})
+})  
 
 mongoose.Promise = Promise
 mongoose.connect(process.env.MONGO_URL)

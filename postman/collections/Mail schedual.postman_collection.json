@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "5da2814b-3ff3-4275-9b99-ddd81388539b",
+		"name": "Mail schedual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34171359"
+	},
+	"item": [
+		{
+			"name": "Schedual email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"receiverEmail\" : \"mahilpatel6858@gmail.com\",\r\n    \"subject\" : \"This is subject\",\r\n    \"text\" : \"this is text\",\r\n    \"recurrence\": {\r\n        \"type\": \"one-time\",\r\n        \"dateTime\": \"14:00:00 15/08/2024\" // \"HH:MM:SS DD/MM/YYYY\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/schedualEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedualEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all Mails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getAllMails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAllMails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mail/66acbbd19ed836da42e53329",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mail",
+						"66acbbd19ed836da42e53329"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete mail",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

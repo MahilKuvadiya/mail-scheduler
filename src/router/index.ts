@@ -1,15 +1,13 @@
 import express from 'express'
 import authentication from './authentication';
-import { users } from './protected/users';
-import { products } from './protected/product';
+import { mail } from './mail';
 
 const router = express.Router();
 
 export default () : express.Router => {
 
     authentication(router) // authentication paths
-    users(router); // protected paths
-    products(router)
+    mail(router) // mail paths
 
     return router;
 }

@@ -35,6 +35,34 @@
 			"response": []
 		},
 		{
+			"name": "Schedual email [ one-time ]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"receiverEmail\" : \"mahilpatel6858@gmail.com\",\r\n    \"subject\" : \"This is subject\",\r\n    \"text\" : \"this is text\",\r\n    \"recurrence\": {\r\n        \"type\": \"one-time\",\r\n        \"dateTime\": \"14:00:00 15/08/2024\" // \"HH:MM:SS DD/MM/YYYY\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/schedualEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedualEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "all Mails",
 			"request": {
 				"method": "GET",
@@ -75,6 +103,14 @@
 		},
 		{
 			"name": "delete mail",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "undsended mails",
 			"request": {
 				"method": "GET",
 				"header": []
